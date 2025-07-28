@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tortas Express CRM</title>
+</head>
+<body>
+  <h1>Bienvenido al CRM de Tortas Express 🎂</h1>
+  <p id="saludo">Cargando saludo...</p>
+
+  <script>
+    fetch('/api/saludo')
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById('saludo').innerText = data.mensaje;
+      });
+  </script>
+</body>
+</html>
